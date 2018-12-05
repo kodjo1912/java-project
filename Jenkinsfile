@@ -4,7 +4,7 @@ pipeline {
         ant 'ant-1.10.5'
     }
     stages {
-         /workspace/Java-pipeline/dist/rectangle-11.jar
+   
         stage('Run tests') {    
             agent any
             steps {
