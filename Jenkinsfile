@@ -17,6 +17,14 @@ pipeline {
                 sh 'ant -f build.xml -v'
             }
         }
+        stage('DEBUG') {    
+            agent any
+            steps {
+                sh 'echo $PATH'
+                sh 'ls /usr/local/bin'
+            }
+        }
+        
         stage('Deploy') {    
             agent any
             steps {
