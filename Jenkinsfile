@@ -1,7 +1,7 @@
 pipeline {
     agent none
     tools {
-        ant 'ant-1.9.6'
+        ant 'ant-1.10.5'
     }
     stages {
         stage('test ant exists') {
