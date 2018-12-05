@@ -1,3 +1,10 @@
-node {
-   echo 'Hello World v2'
+pipeline {
+    agent none
+    stages {
+        stage('Example Build') {
+            steps {
+                sh 'ant -f test.xml -v'
+            }
+        }
+    }
 }
