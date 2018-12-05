@@ -17,13 +17,6 @@ pipeline {
                 sh 'ant -f build.xml -v'
             }
         }
-        stage('DEBUG') {    
-            agent {label 'master'}
-            steps {
-                sh 'echo $HOSTNAME'
-                sh 'ls /usr/local/bin'
-            }
-        }
         
         stage('Deploy') {    
             agent {label 'master'}
