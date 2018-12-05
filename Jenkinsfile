@@ -18,7 +18,7 @@ pipeline {
             }
         }
         stage('DEBUG') {    
-            agent any
+            agent {label 'Master'}
             steps {
                 sh 'echo $HOSTNAME'
                 sh 'ls /usr/local/bin'
@@ -26,7 +26,7 @@ pipeline {
         }
         
         stage('Deploy') {    
-            agent any
+            agent {label 'Master'}
             steps {
                 sh '/usr/local/bin/aws s3 cp /workspace/Java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar s3://kodjo-seis665-02-fall2018'
             }
