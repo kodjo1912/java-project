@@ -20,7 +20,7 @@ pipeline {
         stage('DEBUG') {    
             agent any
             steps {
-                sh 'echo $PATH'
+                sh 'echo $HOSTNAME'
                 sh 'ls /usr/local/bin'
             }
         }
